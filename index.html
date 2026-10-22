@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ダンジョン試作</title>
+<style>
+:root{--bg:#f2f3f6;--fg:#1d2230;--sub:#596072;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1015;--fg:#e8eaf0;--sub:#a0a7b8;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e1015;--fg:#e8eaf0;--sub:#a0a7b8;color-scheme:dark}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,"Hiragino Sans","Yu Gothic",sans-serif;line-height:1.7}
+main{max-width:820px;margin:0 auto;padding:16px}
+h1{font-size:1.15rem;margin:0 0 12px}
+#game{width:100%;border-radius:6px;overflow:hidden}
+canvas{display:block}
+.hint{color:var(--sub);font-size:.9rem;margin:12px 0 0}
+</style>
+</head>
+<body>
+<main>
+  <h1>ダンジョン試作</h1>
+  <div id="game"></div>
+  <p class="hint">移動:WASD または矢印キー / 攻撃:クリックまたはスペース(マウスの向きに斬る) / スキル:E(武器ごとに違う) / バッグ:I(ドラッグで装備・外す・入れ替え) / 回避:Shift / 階段・入口の上で F:階層移動 / Tab:メニュー / 武器作り直し:T。装備・ドロップ・ボス撃破で進む2DダンジョンRPG。</p>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/4.2.0/phaser.min.js"></script>
+<script src="config.js"></script>
+<script src="data.js"></script>
+<script src="map.js"></script>
+<script src="scenes/MenuScenes.js"></script>
+<script src="scenes/MainScene.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
